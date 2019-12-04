@@ -16,7 +16,7 @@ spec:
       - name: nodeapp 
         image: 99818fhwn/nodeapp:#{Build.BuildId}#
         ports: 
-        - containerPort: 80 
+        - containerPort: 3000 
 --- 
 # https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service  
 kind: Service 
@@ -28,6 +28,6 @@ spec:
     app: nodeapp 
   ports: 
   - protocol: TCP 
-    port: 3000 
-    targetPort: 80 
+    port: 80
+    targetPort: 3000 
   type: LoadBalancer 
