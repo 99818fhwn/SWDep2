@@ -14,7 +14,7 @@ spec:
     spec: 
       containers: 
       - name: nodeapp 
-        image: houssemdocker nodeapp:#{Build.BuildId}#
+        image: 99818fhwn/nodeapp:#{Build.BuildId}#
         ports: 
         - containerPort: 80 
 --- 
